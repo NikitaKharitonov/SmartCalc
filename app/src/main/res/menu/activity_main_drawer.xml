@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/foci"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_focus_calculator"
+            android:icon="@android:drawable/btn_star"
+            android:title="@string/nav_menu_focus_calculator" />
+        <item
+            android:id="@+id/nav_focus_complex"
+            android:icon="@android:drawable/btn_star"
+            android:title="Комплксные числа" />
+        <item
+            android:id="@+id/nav_focus_derivative"
+            android:icon="@android:drawable/btn_star"
+            android:title="@string/nav_menu_focus_derivative" />
+        <item
+            android:id="@+id/nav_focus_integral"
+            android:icon="@android:drawable/btn_star"
+            android:title="@string/nav_menu_focus_integral" />
+        <item
+            android:id="@+id/nav_focus_graphs"
+            android:icon="@android:drawable/btn_star"
+            android:title="@string/nav_menu_focus_graphs" />
+    </group>
+</menu>

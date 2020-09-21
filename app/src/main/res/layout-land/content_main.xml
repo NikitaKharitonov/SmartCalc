@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sct.smartcalc.ui.CalculatorActivity">
+
+    <ru.noties.jlatexmath.JLatexMathView
+        android:id="@+id/formula"
+        android:layout_width="666dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="14dp"
+        android:padding="4dip"
+        app:jlmv_alignHorizontal="start"
+        app:jlmv_alignVertical="center"
+        app:jlmv_textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_down"
+        app:layout_constraintStart_toStartOf="@+id/btn_down"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="354dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_down"
+        app:layout_constraintStart_toStartOf="@+id/btn_down"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btn_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="↓"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_up"
+        app:layout_constraintStart_toStartOf="@+id/btn_up"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="←"
+        android:visibility="visible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnClear"
+        app:layout_constraintStart_toStartOf="@+id/btn_right" />
+
+    <Button
+        android:id="@+id/btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="→"
+        android:visibility="visible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnRoot"
+        app:layout_constraintStart_toStartOf="@+id/btnSin" />
+
+    <Button
+        android:id="@+id/btn_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="↑"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/btnSin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="sin"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnPow"
+        app:layout_constraintStart_toStartOf="@+id/btnCos" />
+
+    <Button
+        android:id="@+id/btnCos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="cos"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnSDR"
+        app:layout_constraintStart_toStartOf="@+id/btnTan" />
+
+    <Button
+        android:id="@+id/btnTan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginLeft="145dp"
+        android:layout_marginBottom="6dp"
+        android:onClick="buttonClick"
+        android:text="tan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnSDR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="RAD"
+        app:layout_constraintBottom_toTopOf="@+id/btnTan"
+        app:layout_constraintStart_toEndOf="@+id/btnTan" />
+
+
+    <Button
+        android:id="@+id/btnPow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="( )ⁿ"
+        app:layout_constraintBottom_toTopOf="@+id/btnCos"
+        app:layout_constraintStart_toEndOf="@+id/btnCos" />
+
+    <Button
+        android:id="@+id/btnRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="√"
+        app:layout_constraintBottom_toTopOf="@+id/btnSin"
+        app:layout_constraintStart_toEndOf="@+id/btnSin" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="C"
+        app:layout_constraintBottom_toTopOf="@+id/btn_right"
+        app:layout_constraintStart_toEndOf="@+id/btn_left" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="DEL"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnClear"
+        app:layout_constraintStart_toEndOf="@+id/btnRoot" />
+
+
+    <Button
+        android:id="@+id/btn_left_bracket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="("
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_right_bracket"
+        app:layout_constraintStart_toEndOf="@+id/btn_1" />
+
+    <Button
+        android:id="@+id/btn_right_bracket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text=")"
+        app:layout_constraintBottom_toTopOf="@+id/btn_1"
+        app:layout_constraintStart_toStartOf="@+id/btn_3"
+        app:layout_constraintTop_toTopOf="@+id/btnDelete" />
+
+    <Button
+        android:id="@+id/btnPNS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="+/-"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_right_bracket"
+        app:layout_constraintStart_toEndOf="@+id/btn_right_bracket" />
+
+
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnRoot"
+        app:layout_constraintStart_toEndOf="@+id/btnPow" />
+
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_3"
+        app:layout_constraintStart_toEndOf="@+id/btn_4" />
+
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="3"
+        app:layout_constraintStart_toEndOf="@+id/btn_5"
+        app:layout_constraintTop_toBottomOf="@+id/btnPNS" />
+
+    <Button
+        android:id="@+id/btnDivide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="÷"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnResult"
+        app:layout_constraintStart_toEndOf="@+id/btnResult" />
+
+
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnPow"
+        app:layout_constraintStart_toEndOf="@+id/btnSDR" />
+
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="5"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_4"
+        app:layout_constraintStart_toEndOf="@+id/btn_7" />
+
+    <Button
+        android:id="@+id/btn_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="6"
+        app:layout_constraintStart_toEndOf="@+id/btn_8"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
+
+    <Button
+        android:id="@+id/btnMultiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="×"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_9"
+        app:layout_constraintStart_toEndOf="@+id/btnResult" />
+
+
+    <Button
+        android:id="@+id/btn_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="7"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnSDR"
+        app:layout_constraintStart_toStartOf="@+id/btnComma" />
+
+    <Button
+        android:id="@+id/btn_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="8"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_7"
+        app:layout_constraintStart_toEndOf="@+id/btnComma" />
+
+    <Button
+        android:id="@+id/btn_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="9"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_8"
+        app:layout_constraintStart_toEndOf="@+id/btn_0" />
+
+    <Button
+        android:id="@+id/btnSubtract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="-"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_6"
+        app:layout_constraintStart_toEndOf="@+id/btn_9" />
+
+
+    <Button
+        android:id="@+id/btn_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/btnComma"
+        app:layout_constraintTop_toBottomOf="@+id/btn_7" />
+
+    <Button
+        android:id="@+id/btnComma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text=","
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_0"
+        app:layout_constraintStart_toEndOf="@+id/btnSDR" />
+
+    <Button
+        android:id="@+id/btnResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="="
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_0"
+        app:layout_constraintStart_toEndOf="@+id/btn_0" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="+"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_3"
+        app:layout_constraintStart_toStartOf="@+id/btnPNS" />
+
+
+</android.support.constraint.ConstraintLayout>
+

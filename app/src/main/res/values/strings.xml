@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name" translatable="false">SmartCalc</string>
+    <string name="navigation_drawer_open">Выдвинуть меню</string>
+    <string name="navigation_drawer_close">Сдвинуть меню</string>
+    <string name="nav_header_title" translatable="false">SmartCalc</string>
+    <string name="nav_header_subtitle" translatable="false">WIP</string>
+    <string name="nav_header_desc">Меню</string>
+    <string name="action_settings">Настройки</string>
+    <string name="division_zero" translatable="false">*/0!</string>
+    <string name="nav_menu_focus_calculator">Калькулятор</string>
+    <string name="nav_menu_focus_derivative">Производные</string>
+    <string name="nav_menu_focus_integral">Интегралы</string>
+    <string name="nav_menu_focus_logic">Логика</string>
+    <string name="nav_menu_focus_graphs">Графики</string>
+    <string name="nav_menu_focus_connect">Связь</string>
+    <string name="nav_menu_focus_feedback">Обратная связь</string>
+    <string name="title_activity_graphs">Графики</string>
+    <string name="title_activity_derivative">Производные</string>
+    <string name="title_activity_integral">Интегралы</string>
+</resources>

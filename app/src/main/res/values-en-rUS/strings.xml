@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_menu_focus_feedback">Feedback</string>
+    <string name="nav_menu_focus_connect">Connect</string>
+    <string name="nav_menu_focus_graphs">Graphs</string>
+    <string name="nav_menu_focus_logic">Logic</string>
+    <string name="nav_menu_focus_integral">Integrals</string>
+    <string name="nav_menu_focus_derivative">Derivatives</string>
+    <string name="nav_menu_focus_calculator">Calculator</string>
+    <string name="action_settings">Settings</string>
+    <string name="nav_header_desc">Navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_graphs">Graphs</string>
+    <string name="title_activity_derivative">Derivatives</string>
+    <string name="title_activity_integral">Integrals</string>
+</resources>
